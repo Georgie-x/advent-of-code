@@ -1,4 +1,4 @@
-import proData from "../../input"
+import {proData} from "../../input"
 
 function CrackCode() {
 	let cumTot = 50

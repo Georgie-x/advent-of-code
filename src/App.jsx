@@ -1,5 +1,4 @@
-import DoubleNumbers from "./assets/gift-shop"
-import CrackCode from "./assets/unlock-safe"
+import DoubleNumbers from "./gift-shop"
 
 function App() {
 	return (

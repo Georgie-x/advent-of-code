@@ -1,4 +1,4 @@
-import {proData} from "../../input"
+import { proData } from "../input"
 
 function CrackCode() {
 	let cumTot = 50
@@ -6,14 +6,14 @@ function CrackCode() {
 
 	for (let number of proData) {
 		const absMove = Math.abs(number)
-		
+
 		for (let i = 1; i <= absMove; i++) {
 			if (number > 0) {
 				cumTot = (cumTot + 1) % 100
 			} else {
 				cumTot = (cumTot - 1 + 100) % 100
 			}
-			
+
 			if (cumTot === 0) {
 				count++
 			}

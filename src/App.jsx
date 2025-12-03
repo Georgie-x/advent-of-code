@@ -1,10 +1,11 @@
-import DoubleNumbers from "./gift-shop"
+
+import Joltage from "./joltage"
 
 function App() {
 	return (
 		<>
 			<p>hello</p>
-			<DoubleNumbers />
+			<Joltage />
 		</>
 	)
 }

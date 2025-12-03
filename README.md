@@ -28,3 +28,8 @@ loop over
 // 			let finalNum = Number(`${Number(cHalf)}${Number(dHalf)}`)
 // 			cHalf === dHalf ? (total += finalNum) : null
 // 		}
+
+
+d3
+input - data sorted into array of arrays of digits
+loop1- go over digits except last to find the max first number, use that index to search for second max number

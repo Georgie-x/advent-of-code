@@ -21,7 +21,7 @@ function DoubleNumbers() {
 		}
 	}
 
-	console.log(nummos)
+
 
 	return <p>{total}</p>
 }

@@ -4,10 +4,23 @@ function Joltage() {
 	let totaller = 0
 
 	for (let line of d3input) {
-		let max1 = Math.max(...line.slice(0, -1))
-		let ind1 = line.indexOf(max1)
-		let max2 = Math.max(...line.slice(ind1 + 1))
-		totaller += (Number(`${max1}${max2}`))
+		let indStart = 0
+		let indEnd = -11
+		let innerTot = []
+
+		while (indEnd < 1) {
+			let maxNum =
+				indEnd >= 0 ? Math.max(...line.slice(indStart)) : Math.max(...line.slice(indStart, indEnd))
+			indStart =
+				(indEnd >= 0
+					? line.slice(indStart).indexOf(maxNum)
+					: line.slice(indStart, indEnd).indexOf(maxNum)) +
+				indStart +
+				1
+			indEnd++
+			innerTot.push(maxNum)
+		}
+		totaller += Number(innerTot.join(""))
 	}
 
 	return <p>{totaller}</p>

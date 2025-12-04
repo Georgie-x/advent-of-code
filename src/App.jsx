@@ -1,11 +1,10 @@
-
-import Joltage from "./joltage"
+import Paper from "./paper"
 
 function App() {
 	return (
 		<>
 			<p>hello</p>
-			<Joltage />
+			<Paper />
 		</>
 	)
 }

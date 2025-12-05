@@ -4219,6 +4219,6 @@ let d4input = `..@@.@@@@.
 @.@.@@@.@.`
 	.trim()
 	.split("\n")
-	.map((line) => (el === "." ? (el = 0) : (el = 1)))
+	.map((line) => line.split(""))
 
 export { proData, d2input, d3input, d4input }

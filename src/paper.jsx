@@ -46,5 +46,5 @@ function Paper() {
 	}
 
 	return <p>{count}</p>
-}
+
 export default Paper

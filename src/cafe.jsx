@@ -1,17 +1,24 @@
-import { d5nums, d5arr } from "../input"
+import { d5input } from "../input"
 
 function Cafe() {
-	let fresh = new Set([])
+	let total = 0
+	let prevRangeTop = 0
 
-	for (let num of d5nums) {
-		for (let [start, end] of d5arr) {
-			Number(num) >= Number(start) && Number(num) <= Number(end)
-				? (fresh = new Set([...fresh, num]))
-				: null
+	for (let range of d5input) {
+		console.log(d5input, prevRangeTop, range)
+		if (prevRangeTop >= range[1]) {
+			continue
+		}
+		if (prevRangeTop >= range[0]) {
+			total += range[1] - prevRangeTop
+		} else {
+			total += range[1] - range[0] + 1
+		}
+		if (range[1] > prevRangeTop) {
+			prevRangeTop = range[1]
 		}
 	}
-
-	return <p>{fresh.size}</p>
+	return <p>{total}</p>
 }
 
 export default Cafe

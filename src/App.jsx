@@ -1,11 +1,12 @@
-import Cafe from "./cafe"
+
+import Paper from "./paper"
 
 
 function App() {
 	return (
 		<>
 			<p>hello</p>
-			<Cafe/>
+			<Paper/>
 		</>
 	)
 }

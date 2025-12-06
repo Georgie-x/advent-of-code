@@ -1,12 +1,13 @@
+import Octopus from "./octopus"
 
-import Paper from "./paper"
+
 
 
 function App() {
 	return (
 		<>
 			<p>hello</p>
-			<Paper/>
+			<Octopus/>
 		</>
 	)
 }

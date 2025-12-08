@@ -1,24 +1,29 @@
 import { d7input } from "../input"
 
 function Manifold() {
-
 	let splits = 0
+	let prevBeamOn = []
+	let counter = 0
 
 	for (let line of d7input) {
 		let beamOn = []
-		console.log(line)
-		for (let [index, char] of line) {
-			console.log(char)
-			char === "s"
+		counter++
+
+
+		for (let [index, char] of line.entries()) {
+
+			char === "S"
 				? beamOn.push(index)
-				: char === "^" && prevBeamOnamOn.includes(index)
-				? (beamOn.push(index - 1, index + 1), splits++)
+				: char === "^" && prevBeamOn.includes(index)
+				? (beamOn.push(index - 1, index + 1))
 				: char === "." && prevBeamOn.includes(index)
 				? beamOn.push(index)
 				: null
 		}
-		let prevBeamOn = beamOn
-		beamOn = []
+if (counter % 2 === 0) {splits += beamOn.length}
+	
+		console.log(splits)
+		prevBeamOn = beamOn
 
 	}
 

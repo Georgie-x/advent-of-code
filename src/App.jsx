@@ -1,4 +1,5 @@
-import Octopus from "./octopus"
+import Manifold from "./manifold.jsx"
+
 
 
 
@@ -7,7 +8,7 @@ function App() {
 	return (
 		<>
 			<p>hello</p>
-			<Octopus/>
+			<Manifold/>
 		</>
 	)
 }

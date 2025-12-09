@@ -1,14 +1,11 @@
-import Manifold from "./manifold.jsx"
-
-
-
-
+import Junction from "./junction.jsx"
 
 function App() {
+
 	return (
 		<>
 			<p>hello</p>
-			<Manifold/>
+			<Junction />
 		</>
 	)
 }
